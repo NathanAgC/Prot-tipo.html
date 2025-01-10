@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja BYD</title>
+    <style>
+        /* Reset de margens e padding */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilo para o fundo e o efeito parallax */
+        .parallax {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('img/BYD-KING-EXT-29.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+            transform: translateY(0);
+            transition: transform 0.3s ease-out;
+        }
+
+        /* Estilos do conteúdo da loja */
+        .content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            padding: 50px;
+        }
+
+        .header {
+            text-align: center;
+            margin-top: 150px;
+            color: #fff;
+        }
+
+        .header h1 {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+
+        .header p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .product-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        .product {
+            width: 280px;
+            margin: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0,1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-infor {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product-infor h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .product-infor p {
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        .product :hover {
+            transform: translateY(-10px);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Efeito Parallax -->
+    <div class="parallax" id="parallax"></div>
+
+    <!-- Conteúdo Principal -->
+    <div class="content">
+        <!-- Cabeçalho -->
+         <div class="header">
+            <h1>Bem-vindo à Loja BYD</h1>
+            <p>Explore os melhores carros elétricos e tecnologias de ponta.</p>
+         </div>
+
+         <!-- Seção de Produtos -->
+         <div class="product-section">
+            <div class="product">
+                <img src="img/images.jpg" alt="Carro 1"> <!-- Substitua com imagem de produro -->
+                <div class="product-infor">
+                    <h3>BYD Tang EV</h3>
+                    <p>O SUV elétrico da BYD</p>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="img/byd-pro-1.jpg" alt="Carro 2"> <!-- Substitua com imagem de produro -->
+                <div class="product-infor">
+                    <h3>BYD Qin Pro</h3>
+                    <p>Sedã elétrico inovador</p>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="img/FOTO-01-CREDITO-Amintas-Vidal.jpg" alt="Carro 3"> <!-- Substitua com imagem de produro -->
+                <div class="product-infor">
+                    <h3>BYD Dolphin</h3>
+                    <p>Compacto e eficiente</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+     <div class="footer">
+        <p>&copy; 2025 Loja BYD. Todos os direitos reservados.</p>
+        <a href="#">Sobre</a>
+        <a href="#">Contatos</a>
+        <a href="#">Termos e Condições</a>
+     </div>
+
+     <script>
+        window.addEventListener('scroll', function() {
+            const parallax = document.getElementById('parallax');
+            const scrollPosition = window.scrollY; // Captura a posição de rolagem vertical da página
+
+            // Aplica o efeito parallax, ajustando a posição do fundo com base na rolagem
+            parallax.style.transform = `translateY(${scrollPosition * 0.5}px)`; // Move o fundo com base na rolagem 
+        });
+     </script>
+</body>
+</html>
